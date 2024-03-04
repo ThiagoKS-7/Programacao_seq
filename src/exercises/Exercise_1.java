@@ -11,13 +11,36 @@ import java.util.Scanner;
 * */
 public class Exercise_1 implements Exercise {
     private Scanner r;
-    private short num1;
-    private short num2;
-    private int prod;
+    private int numbers,scanI, scanII,prod;
+    private int MAX_NUMBERS = 2;
+    private String NAME = "Exercise_1";
+
+    private void handleInputs() {
+        numbers += 1;
+        switch(numbers) {
+            case 1:
+                do {
+
+                    System.out.print("Digite o valor do primeiro número: ");
+                    scanI = r.nextInt();
+                } while (scanI == 0);
+                break;
+            case 2:
+                do {
+                    System.out.print("Digite o valor do segundo número: ");
+                    scanII = r.nextInt();
+                } while (scanII == 0);
+                break;
+        }
+        if(numbers < MAX_NUMBERS) {
+            handleInputs();
+        }
+    }
     @Override
     public void execute() {
         r = new Scanner(System.in);
-        System.out.print("Digite dois numeros: ");
-        System.out.printf("Numeros escolhidos: %d, %d\nProduto: %d",(num1 = r.nextShort()), (num2=r.nextShort()), (prod=num1*num2));
+        System.out.printf("[%s] Digite dois numeros e calcule o produto \n\n", NAME);
+        handleInputs();
+        System.out.printf("Produto: %d\n", prod=scanI*scanII);
     }
 }
