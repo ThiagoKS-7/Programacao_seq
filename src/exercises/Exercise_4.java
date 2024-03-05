@@ -18,7 +18,7 @@ public class Exercise_4 implements Exercise {
     public void execute() {
         r = new Scanner(System.in);
         do {
-            System.out.print("\n[%s] Digite um numero inteiro: ");
+            System.out.printf("\n[%s] Digite um numero inteiro: ", NAME);
             X = r.nextInt();
             System.out.printf(
                     "Conteúdo de X: %d\n" +

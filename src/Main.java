@@ -14,7 +14,8 @@ public class Main {
                 new Exercise_2(),
                 new Exercise_3(),
                 new Exercise_3_1(),
-                new Exercise_4()
+                new Exercise_4(),
+                new Exercise_5()
         )).forEach(Exercise::execute);
     }
 }
