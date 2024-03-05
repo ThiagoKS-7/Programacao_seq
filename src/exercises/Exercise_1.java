@@ -10,11 +10,10 @@ import java.util.Scanner;
 * calcule o produto entre eles e mostre o resultado.
 * */
 public class Exercise_1 implements Exercise {
+    protected int MAX_NUMBERS = 2;
+    protected String NAME = "Exercise_1";
     private Scanner r;
-    private int numbers,scanI, scanII,prod;
-    private int MAX_NUMBERS = 2;
-    private String NAME = "Exercise_1";
-
+    private int numbers,scanI, scanII;
     private void handleInputs() {
         numbers += 1;
         switch(numbers) {
@@ -40,6 +39,6 @@ public class Exercise_1 implements Exercise {
         r = new Scanner(System.in);
         System.out.printf("\n[%s] Digite dois numeros e calcule o produto \n\n", NAME);
         handleInputs();
-        System.out.printf("Produto: %d\n", prod=scanI*scanII);
+        System.out.printf("Produto: %d\n", scanI*scanII);
     }
 }

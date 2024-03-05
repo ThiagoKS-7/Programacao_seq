@@ -14,13 +14,11 @@ import java.util.stream.IntStream;
  * com duas casas decimais depois da vírgula (%.2f).
  */
 public class Exercise_3 implements Exercise {
+    protected String NAME = "Exercise_3";
+    protected int MAX_NUMBERS = 4;
     private Scanner r;
     private int numbers = 0;
-    private String NAME = "Exercise_3";
-    private int MAX_NUMBERS = 4;
     private int   scanI, scanII, scanIII, scanIV;
-    private float avg;
-
     private void handleInputs() {
         numbers += 1;
         switch(numbers) {
@@ -59,6 +57,6 @@ public class Exercise_3 implements Exercise {
         r = new Scanner(System.in);
         System.out.printf("\n[%s] Digite quatro inteiros e calcule a média \n\n", NAME);
         handleInputs();
-        System.out.printf("A média é: %.2f\n" ,avg=calcAvg(IntStream.of(scanI,scanII,scanIII,scanIV)));
+        System.out.printf("A média é: %.2f\n" ,calcAvg(IntStream.of(scanI,scanII,scanIII,scanIV)));
     }
 }

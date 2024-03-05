@@ -10,10 +10,10 @@ import java.util.Scanner;
 * calcule e mostre o resultado da soma deles.
 * */
 public class Exercise_2 implements Exercise {
-    private Scanner r;
-    private int sum, numbers = 0;
-    private String NAME = "Exercise_2 ";
+    protected String NAME = "Exercise_2 ";
     protected final int MAX_NUMBERS = 3;
+    private Scanner r;
+    private int numbers = 0;
 
     private int  scanI, scanII, scanIII;
     private void handleInputs() {
@@ -45,6 +45,6 @@ public class Exercise_2 implements Exercise {
         r = new Scanner(System.in);
         System.out.printf("\n[%s] Digite tres numeros e calcule a soma \n\n", NAME);
         handleInputs();
-        System.out.printf("A soma  é: %d\n" ,sum=scanI+scanII+scanIII);
+        System.out.printf("A soma  é: %d\n" ,scanI+scanII+scanIII);
     }
 }
