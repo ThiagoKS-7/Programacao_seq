@@ -19,27 +19,26 @@ public class Exercise_1 implements Exercise {
         numbers += 1;
         switch(numbers) {
             case 1:
-                do {
-
-                    System.out.print("Digite o valor do primeiro número: ");
-                    scanI = r.nextInt();
-                } while (scanI == 0);
+                scanI = validateInput(scanI, "primeiro");
                 break;
             case 2:
-                do {
-                    System.out.print("Digite o valor do segundo número: ");
-                    scanII = r.nextInt();
-                } while (scanII == 0);
+                scanII =validateInput(scanII, "segundo");
                 break;
         }
         if(numbers < MAX_NUMBERS) {
             handleInputs();
         }
     }
+    private int validateInput(int num, String message) {
+        do {
+            System.out.print("Digite o valor do " +message + " número: ");
+            return r.hasNextInt() ? r.nextInt() : 0;
+        } while (num == 0);
+    }
     @Override
     public void execute() {
         r = new Scanner(System.in);
-        System.out.printf("[%s] Digite dois numeros e calcule o produto \n\n", NAME);
+        System.out.printf("\n[%s] Digite dois numeros e calcule o produto \n\n", NAME);
         handleInputs();
         System.out.printf("Produto: %d\n", prod=scanI*scanII);
     }

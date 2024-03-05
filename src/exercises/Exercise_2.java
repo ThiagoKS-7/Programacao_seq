@@ -20,34 +20,31 @@ public class Exercise_2 implements Exercise {
         numbers += 1;
         switch(numbers) {
             case 1:
-                do {
-
-                    System.out.print("Digite o valor do primeiro número: ");
-                    scanI = r.nextInt();
-                } while (scanI == 0);
+                scanI = validateInput(scanI, "primeiro");
                 break;
             case 2:
-                do {
-                    System.out.print("Digite o valor do segundo número: ");
-                    scanII = r.nextInt();
-                } while (scanII == 0);
+                scanII = validateInput(scanI, "segundo");
                 break;
             case 3:
-                do {
-                    System.out.print("Digite o valor do terceiro número: ");
-                    scanIII = r.nextInt();
-                } while (scanIII == 0);
+                scanIII = validateInput(scanIII, "terceiro");
                 break;
         }
+        if(numbers <  MAX_NUMBERS) {
+            handleInputs();
+        }
 
+    }
+    private int validateInput(int num, String message) {
+        do {
+            System.out.print("Digite o valor do " +message + " número: ");
+            return r.hasNextInt() ? r.nextInt() : 0;
+        } while (num == 0);
     }
     @Override
     public void execute() {
         r = new Scanner(System.in);
-        System.out.printf("[%s] Digite tres numeros e calcule a soma \n\n", NAME);
-        while(numbers <  MAX_NUMBERS) {
-            handleInputs();
-        }
+        System.out.printf("\n[%s] Digite tres numeros e calcule a soma \n\n", NAME);
+        handleInputs();
         System.out.printf("A soma  é: %d\n" ,sum=scanI+scanII+scanIII);
     }
 }
