@@ -13,7 +13,7 @@ public class Exercise_2 implements Exercise {
     private Scanner r;
     private int sum, numbers = 0;
     private String NAME = "Exercise_2 ";
-    private int MAX_NUMBERS = 3;
+    protected final int MAX_NUMBERS = 3;
 
     private int  scanI, scanII, scanIII;
     private void handleInputs() {
