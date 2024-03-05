@@ -1,7 +1,4 @@
-import exercises.Exercise_1;
-import exercises.Exercise_2;
-import exercises.Exercise_3;
-import exercises.Exercise_3_1;
+import exercises.*;
 import interfaces.Exercise;
 
 import java.util.ArrayList;
@@ -16,7 +13,8 @@ public class Main {
                 new Exercise_1(),
                 new Exercise_2(),
                 new Exercise_3(),
-                new Exercise_3_1()
+                new Exercise_3_1(),
+                new Exercise_4()
         )).forEach(Exercise::execute);
     }
 }
