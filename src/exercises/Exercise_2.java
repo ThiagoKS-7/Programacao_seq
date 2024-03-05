@@ -4,7 +4,7 @@ import interfaces.Exercise;
 
 import java.util.Scanner;
 
-/*
+/**
 * Construa um programa em Java que leia (via teclado)
 * três números do tipo inteiro,
 * calcule e mostre o resultado da soma deles.
@@ -15,7 +15,7 @@ public class Exercise_2 implements Exercise {
     private String NAME = "Exercise_2 ";
     private int MAX_NUMBERS = 3;
 
-    private int  current, scanI, scanII, scanIII;
+    private int  scanI, scanII, scanIII;
     private void handleInputs() {
         numbers += 1;
         switch(numbers) {
